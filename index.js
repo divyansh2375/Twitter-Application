@@ -57,8 +57,21 @@ app.listen(3000, async () => {
 
 
 //5th
-const tweetRepo = new TweetRepository();
-const tweet = await tweetRepo.getWithComments('650040a0ebbd471f6e248ba2');
-console.log(tweet);
-})
+// const tweetRepo = new TweetRepository();
+// const tweet = await tweetRepo.getWithComments('650040a0ebbd471f6e248ba2');
+// console.log(tweet);
+// })
 
+// 6th
+// const tweetRepo = new TweetRepository();
+// const tweet = await tweetRepo.getAll();
+// console.log(tweet);
+// })
+
+// 7th
+const tweetRepo = new TweetRepository();
+const tweet = await tweetRepo.getAll(0,4);
+// console.log(tweet[0]._id); // this id was virtual becuase it was not showing on console before now after targetiing it is means it was hidden 
+
+console.log(tweet[1].contentWithEmail)
+})
