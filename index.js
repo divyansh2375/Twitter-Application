@@ -77,7 +77,9 @@ app.listen(3000, async () => {
 
 
 // 8th triggers hooks in mongoose
-const tweetRepo = new TweetRepository();
-const tweet = await tweetRepo.create({content: 'With hooks'});
-console.log(tweet)
+// const tweetRepo = new TweetRepository();
+// const tweet = await tweetRepo.create({content: 'With hooks'});
+// console.log(tweet)
+
+
 })
