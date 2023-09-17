@@ -69,9 +69,15 @@ app.listen(3000, async () => {
 // })
 
 // 7th
-const tweetRepo = new TweetRepository();
-const tweet = await tweetRepo.getAll(0,4);
-// console.log(tweet[0]._id); // this id was virtual becuase it was not showing on console before now after targetiing it is means it was hidden 
+// const tweetRepo = new TweetRepository();
+// const tweet = await tweetRepo.getAll(0,4);
+//1st comment // console.log(tweet[0]._id); // this id was virtual becuase it was not showing on console before now after targetiing it is means it was hidden 
 
-console.log(tweet[1].contentWithEmail)
+// console.log(tweet[1].contentWithEmail)
+
+
+// 8th triggers hooks in mongoose
+const tweetRepo = new TweetRepository();
+const tweet = await tweetRepo.create({content: 'With hooks'});
+console.log(tweet)
 })
