@@ -11,6 +11,7 @@ const TweetRepository = require('./src/repository/tweet-repository')
 // 3rd comment
 const Comment = require ('./src/models/comment')
 
+const Tweet = require('./src/models/tweet');
 
 app.listen(3000, async () => {
 
@@ -80,6 +81,15 @@ app.listen(3000, async () => {
 // const tweetRepo = new TweetRepository();
 // const tweet = await tweetRepo.create({content: 'With hooks'});
 // console.log(tweet)
+
+
+// --------------------------------
+// Project -2 twitter part 
+
+const tweets = await Tweet.find({
+    content : ["firsttweet","my tweet","123456"]
+})
+console.log(tweets);
 
 
 })
